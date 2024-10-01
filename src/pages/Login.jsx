@@ -14,12 +14,7 @@ const Login = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-
-    // const res = await axios.post("https://flavoro-clone-backend.onrender.com/api/login", {
-    //   email,
-    //   password,
-    // });
-    const res = await axios.post("http://localhost:5000/api/login", {
+    const res = await axios.post("https://food-website-backend-od60.onrender.com/api/login", {
       email,
       password,
     });

@@ -12,11 +12,7 @@ const VerifyOtp = () => {
   const handleVerifyOtp = async (e) => {
     e.preventDefault();
     try {
-      // const res = await axios.put("https://flavoro-clone-backend.onrender.com/api/verify-otp", {
-      //   otp,
-      //   newPassword: password,
-      // });
-      const res = await axios.put("http://localhost:5000/api/verify-otp", {
+      const res = await axios.put("https://food-website-backend-od60.onrender.com/api/verify-otp", {
         otp,
         newPassword: password,
       });

@@ -14,8 +14,7 @@ const ItemCard = ({ id, name, quantity, price, image, _id }) => {
 
   const removeFromCart = async (id) => {
     const res = await axios.delete(
-      // `https://flavoro-clone-backend.onrender.com/api/remove-from-cart/${id}`
-      `http://localhost:5000/api/remove-from-cart/${id}`
+      `https://food-website-backend-od60.onrender.com/api/remove-from-cart/${id}`
     );
     const data = await res.data;
     toast.success(data.message);
@@ -23,22 +22,16 @@ const ItemCard = ({ id, name, quantity, price, image, _id }) => {
   };
 
   const incrementQuantity = async (id) => {
-    // const res = await axios.put(
-    //   `https://flavoro-clone-backend.onrender.com/api/increment-quantity/${id}`
-    // );
     const res = await axios.put(
-      `http://localhost:5000/api/increment-quantity/${id}`
+      `https://food-website-backend-od60.onrender.com/api/increment-quantity/${id}`
     );
     const data = await res.data;
     getCart(user).then((data) => dispatch(setCart(data.cartItems)));
   };
 
   const decrementQuantity = async (id) => {
-    // const res = await axios.put(
-    //   `https://flavoro-clone-backend.onrender.com/api/decrement-quantity/${id}`
-    // );
     const res = await axios.put(
-      `http://localhost:5000/api/decrement-quantity/${id}`
+      `https://food-website-backend-od60.onrender.com/api/decrement-quantity/${id}`
     );
     const data = await res.data;
     getCart(user).then((data) => dispatch(setCart(data.cartItems)));

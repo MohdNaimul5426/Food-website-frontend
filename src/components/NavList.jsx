@@ -5,12 +5,9 @@ import { Link, useNavigate } from "react-router-dom";
 const NavList = ({ toggleNav, setToggleNav, auth }) => {
   const navigate=useNavigate()
   const handleLogout = async () => {
-    // const res = await axios.get("https://flavoro-clone-backend.onrender.com/api/logout");
-    const res = await axios.get("http://localhost:5000/api/logout");
+    const res = await axios.get("https://food-website-backend-od60.onrender.com/api/logout");
     const data = await res.data;
     toast.success(data.message);
-    // navigate("/login")
-
     window.location.href = "/";
   };
 
